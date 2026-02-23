@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NEXUS</title>
+        <link rel="icon" href="gettyimages-1279799440-612x612.jpg" type="image/png">
+        <!-- Google Fonts for medieval theme -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <header>
+            <div class="header-inner">
+                <h1>Nexus</h1>
+
+                <nav id="mainNav">
+                    <a href="#" onclick="scrollToTop()">Início</a>
+                    <a href="#produtosContainer" onclick="mostraCategoria('todos')">Produtos</a>
+                    <a href="#produtosContainer" onclick="mostraCategoria('pecas')">Peças</a>
+                    <a href="#produtosContainer" onclick="mostraCategoria('quadros')">Quadros</a>
+                    <a href="#produtosContainer" onclick="mostraCategoria('acessorios')">Acessórios</a>
+                    <button id="menuToggle" aria-label="Abrir menu">☰</button>
+                </nav>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" id="searchBar" placeholder="Pesquisar produtos..." oninput="pesquisaProduto()">
+            </div>
+        </header>
+        <hr>
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Bem-vindo à Nexus</h2>
+                <p>Qualidade em quadros, peças e acessórios. Veja nossos destaques abaixo.</p>
+            </div>
+        </section>
+
+        <main id="produtosContainer">
+            <!-- products will be injected here by JavaScript -->
+        </main>
+
+        <!-- produto detail modal -->
+        <div id="produtoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <a id="modalLink" href="#" target="_blank">Visitar produto</a>
+            </div>
+        </div>
+
+
+
+        <hr>
+        <footer>
+            <div class="footer-inner">
+                <p>Nexus &copy; 2026 - Todos os Direitos Reservados.</p>
+                <div class="social">
+                    <a href="#" aria-label="TikTok"><img src="downloadtiktok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="Instagram"><img src="download.jpg" alt="Instagram"></a>
+                  
+                </div>
+            </div>
+        </footer>
+        <button id="toTopBtn" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
